@@ -6,4 +6,4 @@ git merge --abort <br>
 git pull
 
 ## Create a initial repo
-Create a repo, add a file (README or whatever), clone the repo in local directory, add the files you want to commit.
+1) Create a repo 2) add a file (README or whatever) 3) clone the repo in local directory 4) add the files you want to commit.
