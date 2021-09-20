@@ -1,6 +1,6 @@
 # how to set up ssh on Ubuntu Windows subsystem (WSL)
 useful link: https://www.illuminiastudios.com/dev-diaries/ssh-on-windows-subsystem-for-linux/
-
+useful link: https://phoenixnap.com/kb/ssh-permission-denied-publickey
 ## Prerequisite:
 1. Enable Linux on windows subsystem: https://www.ssl.com/how-to/enable-linux-subsystem-install-ubuntu-windows-10/
 2. Download Ubuntu from windows
