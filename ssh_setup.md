@@ -31,6 +31,10 @@ sudo service ssh --full-restart
 ```
 
 ## Test your connection
+check hostname:
+```
+hostname -I
+```
 check ip address: 
 ```
 ip addr show
