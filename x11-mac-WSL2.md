@@ -3,6 +3,13 @@
 Utilize graphical applications from the remote server and view them at local machine. For instance, running programs remotely on server (using vscode) but still be able to visualize the matplotlib plots locally.
 This is more stable than using interative windows such as IPython or jupyter notebooks. This might be the simplest way to do. I have tried using Gtk3Agg backend of Matplotlib etc but it is not working because of the source code configuration.
 
+## An alternative of X11 forwarding for plots that don't require real-time rendering
+A simple and effective way is to use ipympl. Add the following line in the jupyter notebook after importing matplotlib
+```
+%matplotlib widget
+```
+Refer to this link https://github.com/matplotlib/ipympl for more info about ipympl. Ipympl works great with static plots but not for videos which require real-time rendering.
+
 ## How to do it
 General pipeline:
 1. Install X11 forwarding related softwares on server.
@@ -90,3 +97,4 @@ Solution: Your display address is not configured correctly. Check whether X11 ar
 ```
 echo $DISPLAY
 ```
+
