@@ -7,3 +7,5 @@ list(map(lambda variable: function(variable), variable_list))
 ```
 list(filter(lambda variable: condition(variable), variable_list))
 ```
+# Numpy
+1. Be aware of the row (axis=1) and column (axis=0) sum for matrices when calculating norms etc.
