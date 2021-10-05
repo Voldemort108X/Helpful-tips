@@ -93,8 +93,8 @@ You should see an eye popped up at your local machine.
 ## Troubleshooting
 1. Error: Can't open display: X.X.X.X:10:0
 
-Solution: Your display address is not configured correctly. Check whether X11 are given access in the files. Check DISPLAY variable using
+Solution: Your display address is not configured correctly. 1) Check whether X11 are given access in the files. 2) Check DISPLAY variable using
 ```
 echo $DISPLAY
 ```
-
+3) Restart XLauncher at WSL. 4) Reconnect to your server.
