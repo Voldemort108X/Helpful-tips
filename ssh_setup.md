@@ -15,7 +15,7 @@ netsh interface portproxy add v4tov4 listenport=22 listenaddress={YOUR_WINDOWS_I
 ```
 or the following command which helpes you to automatically detect the ip address
 ```
-netsh interface portproxy add v4tov4 listenport=22 listenaddress=10.168.202.105 connectport=22 connectaddress=(wsl hostname -I).trim()
+netsh interface portproxy add v4tov4 listenport=22 listenaddress={YOUR_WINDOWS_IP_ADDRESS} connectport=22 connectaddress=(wsl hostname -I).trim()
 ```
 
 ## Important!!!
