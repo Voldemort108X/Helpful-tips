@@ -10,6 +10,10 @@ WSL2 uses a dynamic ip address and thus can be annoying to connect. Find the win
 ```
 netsh interface portproxy add v4tov4 listenport=22 listenaddress={YOUR_WINDOWS_IP_ADDRESS} connectport=22 connectaddress={YOUR_WSL2_IP_ADDRESS}
 ```
+or the following command which helpes you to automatically detect the ip address
+```
+netsh interface portproxy add v4tov4 listenport=22 listenaddress=10.168.202.105 connectport=22 connectaddress=(wsl hostname -I).trim()
+```
 
 ## Important!!!
 There are two ways to enable openssh-server: 1) Windows Subsystem for Linux (WSL) 2) Windows openssh (installed using powershell or through settings->App->Optional features. They will conflict if you have both!!! So have one of them and remove the others. Highly recommend installing through WSL. If you have installed Windows openssh, uninstall it through settings->App->Optional features and reboot the computer following the instruction. Usually, there is no need to change the sshd_config file. 
