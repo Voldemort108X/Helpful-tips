@@ -2,6 +2,9 @@
 useful link: https://www.illuminiastudios.com/dev-diaries/ssh-on-windows-subsystem-for-linux/
 useful link: https://phoenixnap.com/kb/ssh-permission-denied-publickey
 
+##TODO:
+Run WSL2 script automatically after restart.
+
 ## WSL location
 C:\Users\Xiaoran Zhang\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\xiaoranzhang\miniconda3
 
