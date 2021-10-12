@@ -5,6 +5,12 @@ useful link: https://phoenixnap.com/kb/ssh-permission-denied-publickey
 ## WSL location
 C:\Users\Xiaoran Zhang\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\xiaoranzhang\miniconda3
 
+## WSL2 ip 
+WSL2 uses a dynamic ip address and thus can be annoying to connect. Find the windows address using  WSL2 ip address using hostname -I and add the following to 
+```
+netsh interface portproxy add v4tov4 listenport=22 listenaddress={YOUR_WINDOWS_IP_ADDRESS} connectport=22 connectaddress={YOUR_WSL2_IP_ADDRESS}
+```
+
 ## Important!!!
 There are two ways to enable openssh-server: 1) Windows Subsystem for Linux (WSL) 2) Windows openssh (installed using powershell or through settings->App->Optional features. They will conflict if you have both!!! So have one of them and remove the others. Highly recommend installing through WSL. If you have installed Windows openssh, uninstall it through settings->App->Optional features and reboot the computer following the instruction. Usually, there is no need to change the sshd_config file. 
 
