@@ -31,4 +31,15 @@ def swap(np.array(a), np.array(b)):
   return a, b
 swap(a, b)
 ```
+Practical example:
+```
+def swap(a):
+    b = a
+    b = b.append(4)
+   
+a = [1,2,3]
+c=a
+swap(a)
+print(c)
+```
 The value of c will be changed to b. Thus, try to use np.copy() without corrupting the source value.
