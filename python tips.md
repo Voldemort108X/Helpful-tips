@@ -9,3 +9,26 @@ list(filter(lambda variable: condition(variable), variable_list))
 ```
 # Numpy
 1. Be aware of the row (axis=1) and column (axis=0) sum for matrices when calculating norms etc.
+
+# Value swap or object swap
+Be careful when assigning a value for arrays. For instance, if we are doing something like
+```
+a = c
+def swap(int a, int b):
+  temp = b
+  b = a
+  a = temp
+  return a, b
+swap(a, b)
+```
+The value of c will remain unchanged. However, if we are doing something like
+```
+a = c
+def swap(np.array(a), np.array(b)):
+  temp = b
+  b = a
+  a = temp
+  return a, b
+swap(a, b)
+```
+The value of c will be changed to b. Thus, try to use np.copy() without corrupting the source value.
