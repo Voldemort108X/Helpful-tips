@@ -13,7 +13,7 @@ list(filter(lambda variable: condition(variable), variable_list))
 # Value swap or object swap
 Be careful when assigning a value for arrays. For instance, if we are doing something like
 ```
-a = c
+c = a
 def swap(int a, int b):
   temp = b
   b = a
@@ -23,7 +23,7 @@ swap(a, b)
 ```
 The value of c will remain unchanged. However, if we are doing something like
 ```
-a = c
+c = a
 def swap(np.array(a), np.array(b)):
   temp = b
   b = a
@@ -31,4 +31,4 @@ def swap(np.array(a), np.array(b)):
   return a, b
 swap(a, b)
 ```
-The value of c will be changed to b. Sometimes it might not be easy to reproduce the same error but try to keep in mind this. Thus, try to use np.copy() without corrupting the source value.
+The value of c will be changed to b. Thus, try to use np.copy() without corrupting the source value.
