@@ -1,7 +1,6 @@
 # How to use X11 forwarding for graphical applications from remote server to local computer
 ## Motivation
-Utilize graphical applications from the remote server and view them at local machine. For instance, running programs remotely on server (using vscode) but still be able to visualize the matplotlib plots locally.
-This is more stable than using interative windows such as IPython or jupyter notebooks. This might be the simplest way to do. I have tried using Gtk3Agg backend of Matplotlib etc but it is not working because of the source code configuration.
+The goal of this tip is to provide a detailed description of how to utilize graphical applications from the remote server and view them at local machine without delay (e.g. visualize matplotlib plots/videos created at server).
 
 ## An alternative of X11 forwarding for plots that don't require real-time rendering
 A simple and effective way is to use ipympl. Add the following line in the jupyter notebook after importing matplotlib
