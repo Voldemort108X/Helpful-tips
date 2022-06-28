@@ -4,6 +4,27 @@ srun --pty -t 0:10:00 --mem=64G --gpus=v100:1 --partition gpu bash
 ```
 the name of the job is ``bash''
 
+## check my job queues
+```
+squeue --me
+```
+
+## standard gpu job example (train4d_job1.sh)
+```
+#!/bin/bash
+#SBATCH --job-name=train4d_job1
+#SBATCH --out="./slurm_out/slurm-%j.out"
+#SBATCH --time=04:00:00
+#SBATCH --gpus=v100:1
+#SBATCH --mem=64G
+#SBATCH --partition gpu
+
+pwd
+nvidia-smi
+module load miniconda
+source activate pytorch_env
+python train4d.py --ncrop 4 --losstype l2 --dataset ACDC17_norm_z12_4d --lmbd 0.0001 
+```
 
 ## cheatsheet
 https://research.computing.yale.edu/sites/default/files/files/cheatsheet.pdf
