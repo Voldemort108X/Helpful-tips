@@ -40,3 +40,11 @@ tgt_im = wandb.Image(inputs[1].cpu().detach().numpy()[0, 0][:, :, 32])
  
 wandb.log({"loss": np.mean(epoch_total_loss), "src_im": src_im, "tgt_im": tgt_im}) # log using a dict
 ```
+
+## Add artifact (e.g. model) to existing Wandb run
+```
+wandb.init(entity='TEAM_NAME', project='PROJECT_NAME', id='NAME_OF_RUN', resume='allow')
+artifact = wandb.Artifact('ARTIFACT_NAME', type='model')
+artifact.add_file(os.path.join(model_dir, '%04d.pt' % epoch))
+wandb.run.log_artifact(artifact)
+```
