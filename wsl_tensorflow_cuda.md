@@ -1,4 +1,7 @@
 # How to install tensorflow with GPU in WSL (currently only support 1.15)
+
+Tensorflow compatibibility stuff: https://www.tensorflow.org/install/source#gpu
+
 1. Check https://docs.microsoft.com/en-us/windows/ai/directml/gpu-tensorflow-wsl. Get ready the NVIDIA driver, anaconda(miniconda) and WSL 2(if not yet installed).
 2. Set up virtual environment 
 ```
