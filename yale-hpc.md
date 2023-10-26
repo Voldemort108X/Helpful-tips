@@ -1,3 +1,7 @@
+## when globus is not working
+https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/#mobaxterm
+install mobaxterm on local windows/linux machine and transfer files from there.... Fxxx Globus...
+
 ## Yale hpc request an interactive gpu job
 ```
 srun --pty -t 0:10:00 --mem=64G --gpus=v100:1 --partition gpu bash
