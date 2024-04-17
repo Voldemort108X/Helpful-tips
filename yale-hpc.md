@@ -10,6 +10,10 @@ the name of the job is ``bash''
 ```
 srun --pty -t 0:30:00 --mem=64G --gpus=1 --partition gpu_devel bash
 ```
+request multi-GPU
+```
+srun --pty -t 0:30:00 --mem=64G --gpus=2 --gpus-per-node 2 --partition gpu_devel bash 
+```
 
 ## check my job queues
 ```
