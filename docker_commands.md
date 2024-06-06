@@ -6,7 +6,7 @@
 ```
 docker images
 ```
-3. commit the current container to docker image:
+3. commit the current container to docker image (not inside docker but outside terminal):
 ```
 docker commit --container_id --docker_image
 ```
