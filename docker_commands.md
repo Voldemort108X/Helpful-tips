@@ -23,4 +23,8 @@ open a external terminal (not inside docker)
 ```
 docker ps
 ```
+7. attach to an existing docker
+```
+docker attach container_id
+```
 
