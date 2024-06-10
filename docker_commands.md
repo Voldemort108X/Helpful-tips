@@ -1,8 +1,12 @@
 1. steps to create a docker container from scratch:
-  1) build.sh file: build a docker (after writing the docker file), tag it and push it
-  2) run a docker
+step 1: build.sh file: build a docker (after writing the docker file), tag it and push it
+step 2: run a docker
 
-2. find all available docker:
+2. workflow in CMD for multiple GPUs
+step 1: create a base docker using tmux and then detach it (leave it alone all the time!)
+step 2: create a new session in tmux and attach to the base docker (i.e. docker_gpu1)
+
+4. find all available docker:
 ```
 docker images
 ```
