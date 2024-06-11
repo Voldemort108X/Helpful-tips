@@ -6,7 +6,7 @@ step 2: run a docker
 
 step 1: 1) tmux new session 2) run docker 3) and then detach it (leave it alone all the time!) - **this is your general debugging container** - all GPUs are visible
 
-step 2: 1) tmux new session 2) run docker_multiple gpus (i.e. docker run -d --gpus device=$i --name gpu_i xxx) 3) detach it. **this creates #gpus containers that is used for running scripts**
+step 2 (this might be in conflict with step 1, will raise error NVML not available since GPU will be allocated twice): 1) tmux new session 2) run docker_multiple gpus (i.e. docker run -d --gpus device=$i --name gpu_i xxx) 3) detach it. **this creates #gpus containers that is used for running scripts**
 
 step 3: 1) tmux new session 2) attach docker for gpu_i created in step 2
 
