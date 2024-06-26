@@ -11,4 +11,7 @@ nnUNet_raw="../../../Dataset/nnUNet_raw" nnUNet_preprocessed="../../../Dataset/n
 ```
 nnUNet_raw="../../../Dataset/nnUNet_raw" nnUNet_preprocessed="../../../Dataset/nnUNet_preprocessed" nnUNet_results="../../../Dataset/nnUNet_results"  CUDA_VISIBLE_DEVICES=0 nnUNetv2_train Dataset001_CAMUS 2d 0 --npz
 ```
-4. 
+4. Inference on 1 fold
+5. FInd the best configuration
+6. Inference on all folds
+7. Perform post-processing
