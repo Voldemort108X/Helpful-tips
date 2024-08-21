@@ -1,3 +1,16 @@
+## How to make sure that a previously cloned repo becomes disconnected
+cd into that repo (i.e. cd/xxx)
+remove the .git/
+```
+rm -r ./git
+```
+re-initialize the main repo after cd back to main
+```
+git init
+git add .
+```
+
+
 ## Github push and pull conflict
 ### If original conflict is not identifed in VS code
 Accept the changes and then git pull
