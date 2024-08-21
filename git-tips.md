@@ -4,7 +4,7 @@ remove the .git/
 ```
 rm -r ./git
 ```
-re-initialize the main repo after cd back to main
+re-initialize the main repo after cd back to main (i.e. cd ../)
 ```
 git init
 git add .
