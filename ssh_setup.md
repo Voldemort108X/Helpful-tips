@@ -2,6 +2,58 @@
 useful link: https://www.illuminiastudios.com/dev-diaries/ssh-on-windows-subsystem-for-linux/
 useful link: https://phoenixnap.com/kb/ssh-permission-denied-publickey
 
+## 0322 Update
+1. After a random windows update, the IPhelper service is not running automatically. The dependency of it has been changed. Thus, the ```netsh``` command to do port forwarding is invalid.
+2. To solve this, we need to delete the potentially deprecated dependency and force it to start:
+## 🛠 Fix IP Helper Error 1075: Restore `DependOnService`
+
+### 📍 Step 1: Open the Registry Editor
+
+1. Press `Win + R`, type `regedit`, and press **Enter**.
+2. In the Registry Editor, navigate to:
+
+   ```
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc
+   ```
+
+3. In the right pane, locate the entry named `DependOnService`.
+
+   - If it's missing, incorrect, or contains junk values — it needs to be fixed.
+
+---
+
+### 🔧 Step 2: Set `DependOnService` to the Required Value
+
+1. Double-click `DependOnService` to edit it.
+2. Set it to this **multi-string** value:
+
+   ```
+   RpcSs
+   ```
+
+   - Press **Enter** after typing `RpcSs` so it appears as a new line in the editor.
+   - Make sure it’s the **only** entry listed.
+
+3. Click **OK** to save the changes.
+
+---
+
+### 🔁 Step 3: Restart Your Computer
+
+Restart your Windows machine to apply the changes.
+
+---
+
+### ✅ Step 4: Start the IP Helper Service
+
+1. Press `Win + R`, type `services.msc`, and press **Enter**.
+2. Locate **IP Helper** in the list.
+3. Right-click → **Start**
+
+You should no longer see **Error 1075**, and the IP Helper service should be running properly.
+
+
+
 ## TODO:
 Run WSL2 script automatically after restart.
 
