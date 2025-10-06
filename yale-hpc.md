@@ -2,6 +2,11 @@
 https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/#mobaxterm
 install mobaxterm on local windows/linux machine and transfer files from there.... Fxxx Globus...
 
+## Track live GPU status
+```bash
+watch -n 0.1 nvidia-smi
+```
+
 ## Yale hpc request an interactive gpu job
 ```
 srun --pty -t 0:10:00 --mem=64G --gpus=v100:1 --partition gpu_devel bash
