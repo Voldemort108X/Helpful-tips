@@ -8,7 +8,7 @@ watch -n 0.1 nvidia-smi
 ```
 
 ## Yale hpc request an interactive gpu job
-```
+```bash
 srun --pty -t 0:10:00 --mem=64G --gpus=v100:1 --partition gpu_devel bash
 ```
 the name of the job is ``bash''
@@ -21,12 +21,19 @@ srun --pty -t 0:30:00 --mem=64G --gpus=2 --gpus-per-node 2 --partition gpu_devel
 ```
 
 ## check my job queues
-```
+```bash
 squeue --me
 ```
 
-## standard gpu job example (train4d_job1.sh)
+## check submission rules:
+```bash
+sacctmgr show qos \
+  format=Name%-30,MaxJobsPerUser%-15,MaxSubmitJobsPerUser%-20,MaxTRESPU%-30,MaxWall
+
 ```
+
+## standard gpu job example (train4d_job1.sh)
+```bash
 #!/bin/bash
 #SBATCH --job-name=train4d_job1
 #SBATCH --out="./slurm_out/slurm-%j.out"
