@@ -33,7 +33,7 @@ sacctmgr show qos \
 
 ## organize tmux nested jobs
 1. constraint: you can only nest two layers on the Yale cluster
-2. nest 1: yale_bouchet: manage your compute node, run your `srun` command here
+2. nest 1: yale_bouchet: manage your compute node (only one compute node), run your `srun` command here
 3. nest 2: manage you vllm_server, and parallel processes
 
 ## standard gpu job example (train4d_job1.sh)
