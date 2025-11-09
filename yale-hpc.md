@@ -53,5 +53,22 @@ source activate pytorch_env
 python train4d.py --ncrop 4 --losstype l2 --dataset ACDC17_norm_z12_4d --lmbd 0.0001 
 ```
 
+## priority tier gpu job example (train4d_job1.sh) - if account is associated beforehand
+```bash
+#SBATCH -p priority_gpu
+#SBATCH -A prior_YOUR_PI_LASTNAME
+#SBATCH --job-name=sd_dino
+#SBATCH --out="./slurm_out/slurm-%j.out"
+#SBATCH --time=08:00:00
+#SBATCH --gpus=1
+#SBATCH --mem=64G
+
+pwd
+nvidia-smi
+module load miniconda
+source activate pytorch_env
+python train4d.py --ncrop 4 --losstype l2 --dataset ACDC17_norm_z12_4d --lmbd 0.0001 
+```
+
 ## cheatsheet
 https://research.computing.yale.edu/sites/default/files/files/cheatsheet.pdf
